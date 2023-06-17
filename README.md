@@ -17,6 +17,8 @@
 
 ### Overview
 
+开始接触正规的DFT软件，重点关注代码实现，不必深究物理细节
+
 > What I cannot create, I do not understand. - Richard Feynman
 
 The overall goal of the Psi4NumPy project is to provide an interactive quantum chemistry
