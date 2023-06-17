@@ -19,7 +19,7 @@
 
 开始接触正规的DFT软件，重点关注代码实现，不必深究物理细节
 
-学完这个记得去看GPAW，充分理解后，可以考虑看非python写的软件包的源码
+学完这个记得去看GPAW（gitlab仓库已fork，内核不会变，无需更新），充分理解后，可以考虑看非python写的软件包的源码
 
 > What I cannot create, I do not understand. - Richard Feynman
 
