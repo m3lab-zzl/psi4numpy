@@ -46,6 +46,12 @@ please see our [contributor guidelines](https://github.com/psi4/psi4numpy/blob/m
 
 ### Getting Started
 
+在linux上，直接conda安装即可（不需要登录anaconda），windows不行，无法解决冲突
+
+```sh
+conda create -n p4env psi4 -c psi4
+```
+
 1. Obtain required software
     1. [Psi4NumPy](https://github.com/psi4/psi4numpy) (clone this repository; no install available)
     2. [Psi4](http://psicode.org/psi4manual/1.1/build_obtaining.html)
