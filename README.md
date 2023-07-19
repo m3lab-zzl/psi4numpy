@@ -46,53 +46,12 @@ please see our [contributor guidelines](https://github.com/psi4/psi4numpy/blob/m
 
 ### Getting Started
 
-在linux上，直接conda安装即可（不需要登录anaconda），windows不行，无法解决冲突
+在linux上，直接conda安装即可（不需要登录anaconda）
 
 ```sh
 conda create -n p4env psi4 -c psi4
 ```
-
-1. Obtain required software
-    1. [Psi4NumPy](https://github.com/psi4/psi4numpy) (clone this repository; no install available)
-    2. [Psi4](http://psicode.org/psi4manual/1.1/build_obtaining.html)
-        * Option 1 (easiest): [Download installer](https://psicode.org/installs/latest/) based on your preferred operating system and version of Python. Proceed to follow the instructions described at the bottom of that page.  
-        * Option 2 (easy): Download Conda package according to [instructions](https://psicode.org/psi4manual/master/conda.html#how-to-install-a-psi4-binary-into-an-ana-miniconda-distribution). To find the different versions available visit the [anaconda website](https://anaconda.org/psi4/psi4).
-          ```
-          # Have Anaconda or Miniconda (https://conda.io/miniconda.html)
-          >>> conda create -n p4env psi4 -c psi4 # Create a new environment named p4env and install psi4. 
-          >>> bash
-          >>> source activate p4env
-          ```
-        * Option 3 (medium): [Clone source](https://github.com/psi4/psi4) and [compile](https://github.com/psi4/psi4/blob/master/CMakeLists.txt#L16-L143) according to [instructions](http://psicode.org/psi4manual/master/build_faq.html#configuring-building-and-installing-psifour-via-source)
-          ```
-          # Get Psi4 source
-          >>> git clone https://github.com/psi4/psi4.git
-          >>> git checkout v1.1
-          >>> cmake -H. -Bobjdir -Doption=value ...
-          >>> cd objdir && make -j`getconf _NPROCESSORS_ONLN`
-          # Find `psi4` command at objdir/stage/<TAB>/<TAB>/.../bin/psi4; adjust path if needed
-          ```
-    3. [Python](https://python.org) 3.6+ (incl. w/ Psi4 Options 1 & 2)
-    4. [NumPy](http://www.numpy.org) 1.7.2+ (incl. w/ Psi4 Options 1 & 2)
-    5. [Scipy](https://scipy.org) 0.13.0+
-2. Enable Psi4 & PsiAPI (if Psi4 was built from source)
-   1. Find appropriate paths
-        ```
-        >>> psi4 --psiapi-path
-        export PATH=/path/to/dir/of/python/interpreter/against/which/psi4/compiled:$PATH
-        export PYTHONPATH=/path/to/dir/of/psi4/core-dot-so:$PYTHONPATH
-        ```
-    2. Export relevant paths
-        ```
-        >>> bash
-        >>> export PATH=/path/to/dir/of/python/interpreter/against/which/psi4/compiled:$PATH
-        >>> export PYTHONPATH=/path/to/dir/of/psi4/core-dot-so:$PYTHONPATH
-        ```
-3. Run scripts as conventional Python scripts
-    * Example: Run `DF-MP2.py`
-        ```
-        >>> python psi4numpy/Moller-Plesset/DF-MP2.py
-        ```
+windows不行，无法解决冲突（与是否登录anaconda无关），只好下载psi4conda安装包，安装后即可得到一个可用绝对路径activate的conda环境
 
 New users can follow the
 [Tutorials](https://github.com/psi4/psi4numpy/blob/master/Tutorials/01_Psi4NumPy-Basics/) or the [PsiAPI documentation](http://psicode.org/psi4manual/master/psiapi.html) for an introduction to running Psi4 within the PsiAPI.
