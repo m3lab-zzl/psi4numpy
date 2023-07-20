@@ -51,13 +51,11 @@ please see our [contributor guidelines](https://github.com/psi4/psi4numpy/blob/m
 ```sh
 conda create -n p4env psi4 -c psi4
 ```
-windows不行，无法解决冲突（与是否登录anaconda无关），只好下载psi4conda安装包，安装后即可得到一个可用绝对路径activate的conda环境
+windows上，先禁用镜像，然后
 
-New users can follow the
-[Tutorials](https://github.com/psi4/psi4numpy/blob/master/Tutorials/01_Psi4NumPy-Basics/) or the [PsiAPI documentation](http://psicode.org/psi4manual/master/psiapi.html) for an introduction to running Psi4 within the PsiAPI.
-
-A tutorial that covers the basics of NumPy can be found
-[here](https://education.molssi.org/python-data-analysis/01-numpy-arrays/index.html).
+```sh
+conda create -n p4env psi4 python=3.8 -c conda-forge/label/libint_dev -c conda-forge
+```
 
 ### Repository Organization
 
